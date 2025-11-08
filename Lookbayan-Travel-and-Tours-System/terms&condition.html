@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .terms-container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .terms-text {
+            max-height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .checkbox-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="terms-container">
+    <h1>Terms and Conditions</h1>
+    <div class="terms-text">
+        <p><strong>Welcome to [Travel Agency Name]</strong></p>
+        <p>These terms and conditions outline the rules and regulations for the use of Lookbayan Travel and Tours services.</p>
+
+        <h2>1. General Terms</h2>
+        <p>By accessing or using our services, you agree to comply with these terms. If you do not agree with these terms, please do not use our services.</p>
+
+        <h2>2. Permits and Licenses</h2>
+        <p>The travel agency is fully licensed and permitted to operate under the jurisdiction of Cavite, Philippines. We are committed to ensuring that all tours and packages comply with the local travel and safety regulations.</p>
+        
+        <h2>3. Payments</h2>
+        <p>All bookings must be accompanied by payment. Payment methods include [Credit Card and GCash]. Payments are non-refundable unless stated otherwise in the refund policy.</p>
+        
+        <h2>4. Cancellations</h2>
+        <p>If a tour is canceled by the client, the following terms apply. For tours canceled by the agency, a full refund will be provided.</p>
+
+        <h2>5. Liability</h2>
+        <p>The agency is not responsible for any losses or damages that occur during the trip. By accepting the terms, the client agrees to hold the agency harmless for any unexpected incidents or accidents that may occur.</p>
+
+        <h2>6. Conduct</h2>
+        <p>Clients are expected to behave in a respectful and responsible manner while participating in our tours. Any behavior deemed inappropriate will result in immediate removal from the tour without refund.</p>
+
+        <h2>7. Privacy Policy</h2>
+        <p>We are committed to protecting your privacy. Your personal information will only be used for booking and tour purposes as outlined in our privacy policy.</p>
+
+        <h2>8. Changes to Terms</h2>
+        <p>Lookbayan Travel and Tours reserves the right to modify these terms at any time. It is the client’s responsibility to regularly review the terms to stay informed of any changes.</p>
+
+        <h2>9. Governing Law</h2>
+        <p>These terms shall be governed by and construed in accordance with the laws of Cavite, Philippines, without regard to its conflict of law principles.</p>
+
+        <p>If you have any questions regarding these terms, please contact us at lookbayan@gmail.com.</p>
+    </div>
+
+    <div class="checkbox-container">
+        <input type="checkbox" id="termsCheckbox" name="termsCheckbox">
+        <label for="termsCheckbox">I have read and agree to the Terms and Conditions</label>
+    </div>
+
+    <button type="button" id="submitButton" disabled onclick="goBack()">Go back</button>
+</div>
+
+<script>
+    const termsCheckbox = document.getElementById("termsCheckbox");
+    const submitButton = document.getElementById("submitButton");
+
+    // Enable/disable the "Go back" button based on checkbox state
+    termsCheckbox.addEventListener("change", function () {
+        submitButton.disabled = !termsCheckbox.checked;
+    });
+
+    // Go back to signup page (form data already stored in sessionStorage)
+    function goBack() {
+        window.location.href = "agency_signup.php";
+    }
+</script>
+
+
+</body>
+</html>

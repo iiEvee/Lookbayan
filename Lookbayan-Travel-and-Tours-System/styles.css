@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h2, h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+p, input, a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Change from height to min-height */
+    overflow: hidden;
+}
+
+/* Video Background */
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+    position: relative;
+}
+
+/* Centered Content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Learn More Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(50deg, #1abc9c, #fda32b, #34a5e7);
+    color: white;
+}
+
+/* Style for Active Nav Item */
+.nav-links .active {
+    position: relative;
+    color: #ffdd57; /* Highlight color */
+    font-weight: bold;
+}
+
+/* Wave Effect (Fixed Line, Moving Gradient) */
+.nav-links .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    
+    /* Moving Gradient */
+    background: linear-gradient(50deg, #1abc9c, #fda32b, #34a5e7);
+    background-size: 200% 100%;
+    animation: gradient-move 2s infinite linear;
+}
+
+/* Wave Effect (Fixed Line, Moving Gradient) */
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(50deg, #1abc9c, #fda32b, #34a5e7);
+    background-size: 200% 100%;
+    animation: gradient-move 2s infinite linear;
+}
+
+.nav-links a:hover {
+    text-shadow: 0 0 5px rgba(255, 221, 87, 0.6);
+}
+
+/* Gradient Animation */
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+/* Destinations Section */
+.destinations {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Behind everything */
+}
+
+/* Overlay (Same as Hero Section) */
+.destinations .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust darkness */
+    z-index: -1; /* Behind text but above video */
+}
+
+.destinations h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.destinations p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Destination Cards */
+.destinations-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destination {
+    position: relative;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.destinations-content {
+    margin-bottom: 120px;
+}
+
+.destination img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.destination span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Hover Effect */
+.destination:hover img {
+    transform: scale(1.1);
+}
+
+/* Explore Button */
+.explore-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #ffdd57;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #ffd700;
+}
+
+.travel-info {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.travel-info-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.travel-image {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.travel-text {
+    width: 50%;
+}
+
+.travel-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #f7c100;
+}
+
+.travel-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.stats p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.btns {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btns:hover {
+    background: linear-gradient(50deg, #1abc9c, #fda32b, #34a5e7);
+    color: white;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btns:hover, .btn:hover, .explore-btn:hover {
+    background: linear-gradient(50deg, #1abc9c, #fda32b, #34a5e7);
+    background-size: 300% 100%;
+    animation: gradientMove 3s infinite linear;
+    color: white;
+}
+
+/* Footer Styles */
+.footer {
+    background: #1b1b1b;
+    padding: 40px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-about {
+    max-width: 400px;
+}
+
+.footer-about h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify; /* Justified text */
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f8b500; /* Highlight color */
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #f8b500;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.confirmation-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9f7ef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.confirmation-details strong {
+    color: #5cb85c;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.button:hover {
+    background-color: #4cae4c;
+}

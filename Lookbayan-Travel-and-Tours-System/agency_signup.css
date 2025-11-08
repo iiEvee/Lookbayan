@@ -1,0 +1,261 @@
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form input[type="file"],
+.signup-form input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}   
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .signup-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .signup-card {
+    display: flex;
+    width: 900px;
+    max-width: 95%;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    height: 500px;
+  }
+  
+  .signup-image {
+    flex: 1;
+    background: url('beach.jpg') center/cover no-repeat;
+  }
+  
+  .signup-form {
+    flex: 1.2;
+    max-width: 420px;
+    margin: auto;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }  
+  
+  .signup-form h2 {
+    color: #3798f2;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .signup-form .step {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .signup-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+    width: 106%;
+  }
+  
+  .form-row input {
+    flex: 1;
+  }
+  
+  .signup-form .next-btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background: #d5c3a5;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .signup-form .next-btn:hover {
+    background: #c2ae91;
+  }
+  
+  @media (max-width: 768px) {
+    .signup-card {
+      flex-direction: column;
+    }
+  
+    .signup-image {
+      height: 200px;
+    }
+  }
+
+  /* Additional styles for multi-step form */
+  .form-step {
+    display: none;
+  }
+  .form-step.active {
+    display: block;
+  }
+  
+.form-actions {
+    text-align: center;
+}
+.back-btn {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Form slider wrapper */
+.form-slider {
+    display: flex;
+    width: 300%; /* 3 steps */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .form-step {
+    display: none;  
+  }
+  .form-step.active {
+    display: block;
+  }
+  .signup-form {
+    flex: 1.2;
+    max-width: 420px;
+    margin: auto;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .signup-form select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .signup-form input[type="file"] {
+    border: none;
+    padding: 0;
+  }
+
+  .section-title {
+    color: #3798f2;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+  }
+  
+  .form-row input,
+  .form-row select {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  .terms-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: -10px; /* pull closer to file input */
+    margin-bottom: 20px; /* spacing before submit button */
+  }
+
+  .terms-container input[type="checkbox"] {
+    margin-right: 8px;
+    width: auto;
+  }
+  
+  .terms-link {
+    color: #2e7d32;
+    text-decoration: underline;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background: #f57f17;
+  }
+  
+  .signup-as-traveler-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: gray; /* Gray color for the link */
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .signup-as-traveler-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* To ensure the text is centered in its container */
+  .form-actions {
+    text-align: center;
+  }
+  
