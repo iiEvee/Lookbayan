@@ -1,4 +1,4 @@
-🧭 Lookbayan – Travel Agency Middleman Platform
+# 🧭 Lookbayan – Travel Agency Middleman Platform
 
 Lookbayan is a web-based platform designed to serve as a middleman between clients and multiple travel agencies, providing a unified and convenient space to explore, compare, and book travel services.
 
@@ -6,7 +6,9 @@ The system aims to simplify the travel planning process by consolidating various
 
 One of Lookbayan’s standout features is its 360° virtual view integration, allowing users to experience immersive previews of destinations before making a booking. This feature enhances user confidence and engagement while providing travel agencies with a powerful visual marketing tool.
 
-✨ Key Features
+---
+
+## ✨ Key Features
 
 🌍 Multi-Agency Integration: Connects clients with different travel agencies in one platform.
 
@@ -20,16 +22,22 @@ One of Lookbayan’s standout features is its 360° virtual view integration, al
 
 🧾 Agency Management: Travel agencies can promote services and manage client inquiries efficiently.
 
-🎯 Objective
+---
+
+## 🎯 Objective
 
 To provide a centralized and efficient solution for both travelers and travel agencies promoting transparency, convenience, and innovation in travel booking and management.
 
-🛠️ Technologies Used
+---
+
+## 🛠️ Technologies Used
 
 Frontend: HTML, CSS, JavaScript
 
 Backend: PHP, MySQL
 
 Additional Tools: 360° Virtual Tour Integration
+
+---
 
 Lookbayan bridges the gap between travelers and travel agencies by offering an all-in-one platform for exploration, comparison, and booking enhanced by immersive 360° destination experiences.
