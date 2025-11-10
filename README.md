@@ -1,4 +1,4 @@
-# 🧭 Lookbayan – Travel Agency Middleman Platform
+# 🧭 Lookbayan – Travel Agency Platform
 
 Lookbayan is a web-based platform designed to serve as a middleman between clients and multiple travel agencies, providing a unified and convenient space to explore, compare, and book travel services.
 
